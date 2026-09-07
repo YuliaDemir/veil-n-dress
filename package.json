@@ -1,0 +1,22 @@
+{
+  "name": "veil-n-dress",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuliaDemir/veil-n-dress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YuliaDemir/veil-n-dress/issues"
+  },
+  "homepage": "https://github.com/YuliaDemir/veil-n-dress#readme"
+}
