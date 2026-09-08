@@ -7,6 +7,19 @@
     "apps/*",
     "packages/*"
   ],
+  "lint-staged": {
+    "apps/web/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "apps/api/**/*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  },
   "scripts": {
     "dev": "concurrently -n web,api \"npm run dev:web\" \"npm run dev:api\"",
     "dev:web": "npm run dev -w apps/web",
@@ -15,7 +28,11 @@
     "lint": "npm run lint --workspaces --if-present",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "lint:web": "npm run lint -w apps/web",
+    "lint:api": "npm run lint -w apps/api",
+    "prepare": "husky",
+    "test": "npm run test --workspaces --if-present"
   },
   "repository": {
     "type": "git",
@@ -30,6 +47,8 @@
   "homepage": "https://github.com/YuliaDemir/veil-n-dress#readme",
   "devDependencies": {
     "concurrently": "^10.0.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.5.0",
     "prettier": "^3.9.6"
   }
 }

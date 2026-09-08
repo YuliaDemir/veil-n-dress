@@ -33,6 +33,7 @@
     "rxjs": "^7.8.1"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.5",
     "@nestjs/cli": "^12.0.0",
     "@nestjs/mau": "^0.2.6",
     "@nestjs/schematics": "^12.0.0",
@@ -41,11 +42,16 @@
     "@types/node": "^24.0.0",
     "@types/supertest": "^7.0.0",
     "@vitest/coverage-v8": "^4.1.2",
+    "eslint": "^9.39.5",
+    "eslint-plugin-perfectionist": "^5.11.0",
+    "globals": "^14.0.0",
     "oxlint": "^1.58.0",
     "prettier": "^3.4.2",
+    "prisma": "^8.0.0-rc.13",
     "source-map-support": "^0.5.21",
     "supertest": "^7.0.0",
     "typescript": "^6.0.2",
+    "typescript-eslint": "^8.70.0",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^4.1.2"
   }
