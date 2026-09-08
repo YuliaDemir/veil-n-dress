@@ -7,7 +7,16 @@
     "apps/*",
     "packages/*"
   ],
-  "scripts": {},
+  "scripts": {
+    "dev": "concurrently -n web,api \"npm run dev:web\" \"npm run dev:api\"",
+    "dev:web": "npm run dev -w apps/web",
+    "dev:api": "npm run start:dev -w apps/api",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/YuliaDemir/veil-n-dress.git"
@@ -18,5 +27,9 @@
   "bugs": {
     "url": "https://github.com/YuliaDemir/veil-n-dress/issues"
   },
-  "homepage": "https://github.com/YuliaDemir/veil-n-dress#readme"
+  "homepage": "https://github.com/YuliaDemir/veil-n-dress#readme",
+  "devDependencies": {
+    "concurrently": "^10.0.5",
+    "prettier": "^3.9.6"
+  }
 }
