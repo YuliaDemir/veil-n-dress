@@ -1,0 +1,9 @@
+apps/api/prisma/migrations
+
+**/.next/**
+**/node_modules/**
+**/dist/**
+**/build/**
+**/coverage/**
+
+package-lock.json
